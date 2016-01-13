@@ -1,37 +1,37 @@
 ---
 layout: default
 ---
-
 <div class="col_2">
     <div class="left">
-      <h1> Welcome to UNIS-UN </h1>
+      <h1> WELCOME TO UNIS-UN </h1>
       <p> Welcome to the UNIS-UN Website! Our goal as an organization is to provide an educationally and intellectually enriching experience for our peers from around the world while promoting globalism and cross-cultural exchange.</p>
 
-      <p>We host an annual conference relating to a contemporary global issue. We invite expert and engaging speakers that are well versed on the topic who present to our audience of 700 high school students from International Schools from 5 continents. For the past 37 years it has been held in the General Assembly Hall at the United Nations Headquarters in New York City. </p>
+      <p>We host an annual conference relating to a contemporary global issue. We invite expert and engaging speakers that are well versed on the topic who present to our audience of 700 high school students from International Schools from 5 continents. For the past 40 years it has been held in the General Assembly Hall at the United Nations Headquarters in New York City. </p>
         
       <p>To the end of promoting global awareness and cross-culturalism, the annual themes are always ones of global importance. Over three hundred students from all over the world are invited to attend in addition to the upper classes at the United Nations International School. This is our second year that there will be a half day international celebration featuring international performances and a cultural showcase in the Sylvia Howard Fuhrman Auditorium at UNIS.</p>
-      
 
-      <p> <h2><a href="http://www.unis-un.org/assets/working_paper.pdf"> <i class="fa fa-newspaper-o"></i> Working Paper</a> </h2></p>
+    <p> <h3><!--<a href="http://www.unis-un.org/assets/working_paper.pdf">--> <i class="fa fa-newspaper-o"></i> Check back soon for the working paper!</a> </h3></p>
     </div>
 
     <div class="right cur_conf">
     {%if site.show_tweets %}     
       
-      <h2> UNIS-UN Tweets </h2>
+      <h2>TWEETS</h2>
 
       <a class="twitter-timeline" href="https://twitter.com/unis_un" data-widget-id="557557787337957376">Tweets by @unis_un</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
     {% else %}
-      <h1>Upcoming Events</h1>
+      <h1>UPCOMING EVENTS</h1>
       <a href="/confs/{{ site.conf_year }}">
-        <img class="logo" src="/img/{{ site.conf_year }}/conf-logo.png"> 
+        <img id ="homeuplogo" class="logo" src="/img/{{ site.conf_year }}/conf-logo.png"> 
       </a>
+      <div class ="homeupcoming">
       <a href="/confs/{{ site.conf_year }}">
         <h2> UNIS-UN {{ site.conf_year }} </h2>
         <p> {{ site.data.[site.conf_year].info.title }}</p>
       </a>
+      </div>
 
     {% endif %}
 
@@ -43,7 +43,7 @@ layout: default
 <hr>
 
 <div class="schedule col_2">
-  <h1> Schedule </h1>
+  <h1>SCHEDULE</h1>
   <!-- Edit below -->
   <div class="left">
     <h2> Thursday 5<sup>th</sup> </h2>
@@ -117,7 +117,7 @@ layout: default
 
  <!-- Live Streem Section -->
 <div id="steam_sec">
-  <h1> Live Stream </h1>
+  <h1>LIVE STREAM</h1>
   <div class="stream">
     <!-- This is where the live stream embed link will go -->
 
@@ -131,13 +131,15 @@ layout: default
 {% endif %}
 
 <div class="speakers">
-  <h1> Speakers {{ site.conf_year}} </h1>
+  <h1>SPEAKERS {{ site.conf_year}} </h1>
   <ul>
     {% for speaker in site.data.[site.conf_year].speakers %}
       <li>
         <div class="speaker">
+        <a target ="_blank" href="{{ speaker.bio_link }}">
           <img class="head" src="/img/{{ site.conf_year }}/speakers/{{ speaker.name_normal }}.jpg">
           <h2> {{ speaker.name}} </h2>
+         </a>
         </div>
       </li>
     {% endfor %}

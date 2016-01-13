@@ -1,42 +1,47 @@
 <header>
   <div class="wrap header">
-    <nav>
+   <div class="column">
+    <nav id="nav-left">
       <ul>
         <li>
-          <a> About </a>
+          <a href="/">ABOUT</a>
           <ul>
-            <li> <a href="/about/mission"> Our Mission</a> </li>
-            <li> <a href="/about/history"> History </a> </li>
-            <li> <a href="/about/organization"> Organization </a> </li>
+            <li> <a href="/about/mission">MISSION</a> </li>
+            <li> <a href="/about/history">HISTORY</a> </li>
+            <li> <a href="/about/organization">ORGANIZATION</a> </li>
           </ul> 
         </li>
         <li>
-          <a> Conferences </a>
+          <a href="/confs/">CONFERENCES</a>
           <ul>
             {% for year in site.data.confs limit:3 %}
               <li>
-                <a href="/confs/{{ year }}"> {{ site.data.[year].info.year }} {{ site.data.[year].info.title_s }} </a>
+                <a href="/confs/{{ year }}">{{ site.data.[year].info.year }}</a>
               </li>
             {% endfor %}
-            <li> <a href="/confs/">More...</a></li>
+            <li> <a href="/confs/">MORE YEARS</a></li>
           </ul>
-        </li>
-        <li>
-         <a> Information </a>
-         <ul>
-            <li> <a href="/info/schools"> For Visiting Schools </a> </li>
-            <li> <a href="/info/hosts"> For UNIS Hosts </a> </li>
-          </ul> 
         </li>
       </ul>
     </nav>
+    <nav id="nav-right">
+      <ul>
+        <li>
+         <a href="/info/">INFORMATION</a>
+         <ul>
+            <li> <a href="/info/schools">VISITING SCHOOLS</a> </li>
+            <li> <a href="/info/hosts">UNIS HOSTS</a> </li>
+          </ul> 
+        </li>
+        <li>
+         <a href="/contact/">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="column">
     <div id="main_logo">
-      <a href="/"><img src="/img/generic-logo.png" id="main_logo_img"> </a>
-      <div>
-        <span id="main_title"> UNIS-UN </span>
-        <br>
-        <span id="main_sub"> {{ site.conf_year }} {{ site.data.[site.conf_year].info.title_s }} </span>
-      <div>
+      <a href="/"><img src="/img/main-logo.png" id="main_logo_img"> </a>
     </div>
-  <div> 
+  </div>
 </header>

@@ -11,19 +11,19 @@
   <div class="column">
     <ul>
       {% if site.facebook_username %}<li>
-        <a href="https://facebook.com/{{ site.facebook_username }}">
+        <a target="_blank" href="https://facebook.com/{{ site.facebook_username }}">
           <i class="icon fa fa-facebook"></i>
           <span class="username"> {{ site.facebook_username }}</span>
         </a>
       </li>{% endif %}
       {% if site.twitter_username %}<li>
-        <a href="https://twitter.com/{{ site.twitter_username }}">
+        <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}">
           <i class="icon fa fa-twitter"></i>
           <span class="username"> {{ site.twitter_username }}</span>
         </a>
       </li>{% endif %}
       {% if site.insta_username %}<li>
-        <a href="http://instagram.com/{{ site.insta_username }}">
+        <a target="_blank" href="http://instagram.com/{{ site.insta_username }}">
           <i class="fa fa-instagram"></i>
           <span class="username"> {{ site.insta_username }}</span>
         </a>
@@ -32,8 +32,7 @@
   </div>
 
   <div class="column">
-    <p>Copyright © 2015 {{ site.title }}</p>
-    <p>Made with <i class="fa fa-heart" style="color: #c0392b"></i> by the <a href="http://zitgan.com"> Zitgan</a> team</p>
+    <p>Copyright © 2016 {{ site.title }}</p>
   </div>
 
 </div>
